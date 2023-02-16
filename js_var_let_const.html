@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var , const , let variable in js </title>
+</head>
+<body>
+   
+
+
+    <script>
+    let int  = 1234 // integer 
+    let float = 3.23// float value
+    let nu = undefined
+    let un = null
+    var a ="Global scop "; // Global scope and it can update 
+    document.write(a) 
+    var a ="updated variable's value "
+    let b = "block scop";
+    // let b = 45; this alos won't update 
+    // const c= "Constant value";// it will give an error const value will not change 
+    const c = 45;
+    
+    {
+        let c  = 46;
+        let b = "block"
+        console.log(b)
+        console.log(c)
+        console.log(a)
+    }
+    console.log(b)
+    console.log(c)
+
+    </script>
+</body>
+</html>

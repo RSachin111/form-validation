@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nested-dropdowns {
+         
+            border: 1px solid #d1d5db;
+            display: flex;
+
+           
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nested-dropdowns li {
+            cursor: pointer;
+
+        
+            padding: 0.25rem;
+
+            position: relative;
+        }
+
+    
+        .nested-dropdowns ul {
+           
+            border: 1px solid #d1d5db;
+
+       
+            display: none;
+
+        
+            left: 0;
+            position: absolute;
+            top: 100%;
+
+           
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        .nested-dropdowns ul ul {
+            left: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .nested-dropdowns li:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        
+        .nested-dropdowns li:hover>ul {
+            display: block;
+        }
+        .active:hover{
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nested-dropdowns">
+        <li class="active">Home </li>
+        <li>
+            <div class="nested-dropdowns__item">
+                <a href="#"><img src="images/dropdown_arrow.png" width="10px" height="10px">D1</a>
+      
+            </div>
+            <ul>
+                <li> dropdown Item 1</li>
+                <li>dropdown Item 2</li>
+                <li>
+                    <div class="nested-dropdowns__item">
+                        <a href="#"><img src="images/dropdown_side_arrow.png" width="10px" height="10px">D2</a>
+                    </div>
+                    <ul>
+                        <li>Dropdown2 item 1</li>
+                        <li>Dropdown2 item 2</li>
+                        <li>Dropdown2 item 3</li>
+                        <li>Dropdown2 item 4</li>
+                    </ul>
+                </li>
+                <li>dropdown Item 4</li>
+                <li>dropdown Item 5</li>
+            </ul>
+        </li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+    </ul>
+</body>
+
+</html>
